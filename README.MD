@@ -1,7 +1,7 @@
 # 🚴‍♂️ Calories Predictor - Cyclisme & Machine Learning
 Ce projet est une application de prédiction de **calories brûlées lors d'une sortie à vélo**, vasée sur un **modèle de machine learning entraîné sur un dataset synthétique réaliste**.
 > Il s'agit d'un projet personnel mêlant passion pour le cyclisme, intérêt pour la physiologie et compétences en data science.
-
+![App calories predictor](images/Capture%20d’écran%202025-03-29%20à%2019.23.52.png)
 ---
 
 ## 📦 Fonctionnalités

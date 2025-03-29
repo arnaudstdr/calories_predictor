@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
 import numpy as np
+import pandas as pd
 
 # Chargement du modèle entraîné
 model = joblib.load('model_calories.pkl')
@@ -20,6 +21,12 @@ fc_moy = st.number_input("Fréquence cardiaque moyenne (bpm)", min_value=80, max
 
 # Bouton de prédiction
 if st.button("🔍 Prédire les calories brûlées"):
-    X_input = np.array([[poids, duree, distance, vitesse, fc_moy]])
+    X_input = pd.DataFrame([{
+        'poids_kg': poids,
+        'duree_min': duree,
+        'vitesse_moyenne': vitesse,
+        'distance_km': distance,
+        'fc_moyenne': fc_moy
+    }])
     prediction = model.predict(X_input)[0]
     st.success(f"🔥 Estimation : **{prediction:.0f} kcal** brûlées pendant la sortie.")

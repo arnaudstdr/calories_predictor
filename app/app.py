@@ -1,10 +1,11 @@
 import streamlit as st
 import joblib
-import numpy as np
 import pandas as pd
+import os
 
 # Chargement du modèle entraîné
-model = joblib.load('model_calories.pkl')
+model_path = os.path.join(os.path.dirname(__file__), "model_calories.pkl")
+model = joblib.load(model_path)
 
 # Configuration de la page
 st.set_page_config(page_title="Calories à vélo", layout="centered")
